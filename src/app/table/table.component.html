@@ -1,0 +1,22 @@
+<nav>
+    <ul>
+      <li><a routerLink="/home">Home</a></li>
+    </ul>
+  </nav>
+<div class="button-container">
+<button mat-raised-button class="create-cls" (click)="openModal()">Create Table</button>
+</div>
+
+<div class="cards-container">
+    <div *ngFor="let table of tableDetail" class="table-card" (click)="goToTableDetail(table.id)">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title style="color: blueviolet;">{{ table.name }}</mat-card-title>
+          <mat-card-subtitle>{{ table.type }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>Total Seats: <a style="color: blueviolet;">{{ table.noOfSeats }} seat</a></p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>

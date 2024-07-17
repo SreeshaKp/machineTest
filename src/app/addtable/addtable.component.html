@@ -1,0 +1,35 @@
+<h2 mat-dialog-title>Add Table
+    <button mat-icon-button  (click)="onCancel()" style="float: right;border: none;color: red;">
+        <mat-icon>X</mat-icon>
+      </button>
+</h2>
+<mat-dialog-content>
+  <mat-form-field appearance="fill">
+    <mat-label>Table Name</mat-label>
+    <input matInput [(ngModel)]="tableDetails.name">
+  </mat-form-field>
+<br>
+  <mat-form-field appearance="fill">
+    <mat-label>Table Type</mat-label>
+    <mat-select [(ngModel)]="tableDetails.type">
+      <mat-option *ngFor="let type of tableTypes" [value]="type">
+        {{ type }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+  <div class="tableDetails-count">
+    <label>Number of Seats</label>
+    <div>
+    <button mat-button class="num-cls" (click)="decrement()">-</button>
+    <input type="number" class="noOfseat-cls" [(ngModel)]="tableDetails.noOfSeats" min="0" style="width: 50px; text-align: center;">
+    <button mat-button class="num-cls" (click)="increment()">+</button>
+</div>
+  </div>
+<br>
+
+</mat-dialog-content>
+<mat-dialog-actions style="place-content: center;">
+  <button mat-button class="submit-cls" (click)="onSubmit()">Submit</button>
+</mat-dialog-actions>

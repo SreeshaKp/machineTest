@@ -1,0 +1,92 @@
+.table-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.table-wrapper {
+  position: relative;
+  width: 300px; 
+  height: 300px; 
+}
+
+.table {
+  border: 2px solid #000;
+  text-align: center;
+  background-color: #f0e68c; 
+}
+
+.Circle {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Square {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Rectangle {
+  width: 150px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.seats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.seat {
+  background-color: #ccc;
+  border: 1px solid #000;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 3px;
+}
+
+.Circle .seat {
+  position: absolute;
+}
+
+.Circle .seat:nth-child(1) { top: 10px; left: 50%; transform: translateX(-50%); } 
+.Circle .seat:nth-child(2) { top: 50%; left: 90px; transform: translateY(-50%); } 
+.Circle .seat:nth-child(3) { bottom: 10px; left: 50%; transform: translateX(-50%); } 
+.Circle .seat:nth-child(4) { top: 50%; left: 10px; transform: translateY(-50%); }
+
+.Square .seat {
+  position: absolute;
+}
+
+.Square .seat:nth-child(1) { top: -10px; left: 50%; transform: translateX(-50%); } 
+.Square .seat:nth-child(2) { top: 50%; left: 110px; transform: translateY(-50%); } 
+.Square .seat:nth-child(3) { bottom: -10px; left: 50%; transform: translateX(-50%); } 
+.Square .seat:nth-child(4) { top: 50%; left: -10px; transform: translateY(-50%); } 
+
+.Rectangle .seat {
+  position: absolute;
+}
+
+.Rectangle .seat:nth-child(1) { top: -10px; left: 75%; transform: translateX(-50%); } 
+.Rectangle .seat:nth-child(2) { top: -10px; left: 25%; transform: translateX(-50%); } 
+.Rectangle .seat:nth-child(3) { bottom: -10px; left: 75%; transform: translateX(-50%); } 
+.Rectangle .seat:nth-child(4) { bottom: -10px; left: 25%; transform: translateX(-50%); }
+.Rectangle .seat:nth-child(5) { top: 50%; left: -10px; transform: translateY(-50%); } 
+.Rectangle .seat:nth-child(6) { top: 50%; left: 110px; transform: translateY(-50%); } 
